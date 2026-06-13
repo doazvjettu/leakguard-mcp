@@ -1,0 +1,10 @@
+# Smithery config — https://smithery.ai/docs/build/project-config
+# Local stdio MCP server: strategy code never leaves the machine.
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+    additionalProperties: false
+  commandFunction: |-
+    (config) => ({ command: 'python', args: ['-m', 'leakguard.server'] })
