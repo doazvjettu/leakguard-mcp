@@ -1,3 +1,4 @@
+<!-- mcp-name: io.github.doazvjettu/leakguard-mcp -->
 # leakguard-mcp
 
 **Squawk for backtests.** A local-first MCP server that static-analyzes agent-generated

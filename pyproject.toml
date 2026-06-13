@@ -1,6 +1,6 @@
 [project]
 name = "leakguard-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Squawk for backtests — static leakage/lookahead-bias detector for trading/ML strategy code, exposed over MCP."
 readme = "README.md"
 requires-python = ">=3.11"
