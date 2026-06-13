@@ -1,6 +1,13 @@
 <!-- mcp-name: io.github.doazvjettu/leakguard-mcp -->
 # leakguard-mcp
 
+[![PyPI](https://img.shields.io/pypi/v/leakguard-mcp)](https://pypi.org/project/leakguard-mcp/)
+[![Python](https://img.shields.io/pypi/pyversions/leakguard-mcp)](https://pypi.org/project/leakguard-mcp/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![release](https://github.com/doazvjettu/leakguard-mcp/actions/workflows/release.yml/badge.svg)](https://github.com/doazvjettu/leakguard-mcp/actions/workflows/release.yml)
+[![MCP registry](https://img.shields.io/badge/MCP-registry-blue)](https://registry.modelcontextprotocol.io)
+[![glama](https://img.shields.io/badge/Glama-listed-8A2BE2)](https://glama.ai/mcp/servers/doazvjettu/leakguard-mcp)
+
 **Squawk for backtests.** A local-first MCP server that static-analyzes agent-generated
 Python code and flags **lookahead bias & data leakage** *before* the backtest runs.
 
