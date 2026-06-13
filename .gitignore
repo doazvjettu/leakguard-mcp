@@ -1,0 +1,26 @@
+# Local secrets of any kind stay out of the repo.
+.secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+dist/
+build/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Internal docs — keep planning/pricing notes and agent guidance out of the public repo.
+LEAKGUARD_MCP_PLAN.md
+CLAUDE.md

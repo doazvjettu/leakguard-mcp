@@ -1,0 +1,50 @@
+[project]
+name = "leakguard-mcp"
+version = "0.1.0"
+description = "Squawk for backtests — static leakage/lookahead-bias detector for trading/ML strategy code, exposed over MCP."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "doazvjettu", email = "doazvjettu2k@gmail.com" }]
+keywords = ["mcp", "data-leakage", "lookahead-bias", "backtest", "static-analysis", "pandas", "machine-learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "libcst>=1.4",
+    "fastmcp>=2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/doazvjettu/leakguard-mcp"
+Repository = "https://github.com/doazvjettu/leakguard-mcp"
+Issues = "https://github.com/doazvjettu/leakguard-mcp/issues"
+
+[project.scripts]
+leakguard-mcp = "leakguard.server:main"
+leakguard = "leakguard.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+demo = [
+    "pillow>=10",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["leakguard"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

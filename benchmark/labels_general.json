@@ -1,0 +1,12 @@
+{
+  "gml_bad_01_scaler_before_split.py": {"LG003": 1},
+  "gml_bad_02_imputer_full_data.py": {"LG003": 1},
+  "gml_bad_03_pca_before_split.py": {"LG003": 1},
+  "gml_bad_04_kfold_sensor_stream.py": {"LG004": 1},
+  "gml_bad_05_shuffled_clickstream.py": {"LG004": 1},
+  "gml_bad_06_target_encoding.py": {"LG010": 1},
+  "gml_bad_07_fullframe_normalization.py": {"LG003": 1},
+  "gml_clean_01_pipeline_cv.py": {},
+  "gml_clean_02_fit_train_only.py": {},
+  "gml_clean_03_per_fold_scaling.py": {}
+}
