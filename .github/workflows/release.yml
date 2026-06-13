@@ -1,0 +1,35 @@
+name: release
+
+# Build, test, and publish to PyPI when a v* tag is pushed.
+# Auth is PyPI Trusted Publishing (OIDC) — NO token is stored anywhere.
+# One-time setup is required on PyPI; see PUBLISHING.md section 2.
+
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: pypi          # must match the GitHub environment + PyPI publisher config
+    permissions:
+      id-token: write          # OIDC token minted at runtime — this replaces a stored secret
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: uv sync --extra dev
+
+      - name: Test
+        run: uv run pytest -q
+
+      - name: Build
+        run: uv build
+
+      - name: Publish to PyPI (trusted publishing)
+        run: uv publish        # no --token: uv uses OIDC in CI automatically
